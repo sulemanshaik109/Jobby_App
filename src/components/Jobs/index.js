@@ -46,6 +46,29 @@ const salaryRangesList = [
   },
 ]
 
+const locations = [
+  {
+    locationId: 'HYDERABAD',
+    location: 'Hyderabad',
+  },
+  {
+    locationId: 'BANGALORE',
+    location: 'Bangalore',
+  },
+  {
+    locationId: 'CHENNAI',
+    location: 'Chennai',
+  },
+  {
+    locationId: 'DELHI',
+    location: 'Delhi',
+  },
+  {
+    locationId: 'MUMBAI',
+    location: 'Mumbai',
+  },
+]
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -60,6 +83,7 @@ class Jobs extends Component {
     selectedEmploymentTypes: [],
     jobsList: [],
     apiStatus: apiStatusConstants.initial,
+    selectedLocations: [],
   }
 
   componentDidMount() {
@@ -139,13 +163,30 @@ class Jobs extends Component {
     this.setState({activeSalaryRangeId}, this.getJobsList)
   }
 
+  changeLocation = activeLocation => {
+    const {selectedLocations} = this.state
+    if (selectedLocations.includes(activeLocation)) {
+      const updatedList = selectedLocations.filter(
+        each => each !== activeLocation,
+      )
+      this.setState({selectedLocations: updatedList})
+    } else {
+      this.setState(prevState => ({
+        selectedLocations: [...prevState.selectedLocations, activeLocation],
+      }))
+    }
+  }
+
   onRetry = () => {
     this.getJobsList()
   }
 
   renderJobsListView = () => {
-    const {jobsList, searchInput} = this.state
-    const shouldShowJobsList = jobsList.length > 0
+    const {jobsList, searchInput, selectedLocations} = this.state
+    const updatedJobsList = jobsList.filter(each =>
+      each.location.includes(selectedLocations),
+    )
+    const shouldShowJobsList = updatedJobsList.length > 0
 
     return (
       <>
@@ -169,7 +210,7 @@ class Jobs extends Component {
           </div>
           {shouldShowJobsList ? (
             <>
-              {jobsList.map(jobDetails => (
+              {updatedJobsList.map(jobDetails => (
                 <JobCard key={jobDetails.id} jobDetails={jobDetails} />
               ))}
             </>
@@ -263,6 +304,8 @@ class Jobs extends Component {
               salaryRangesList={salaryRangesList}
               changeEmploymentType={this.changeEmploymentType}
               changeSalaryRange={this.changeSalaryRange}
+              locations={locations}
+              changeLocation={this.changeLocation}
             />
           </div>
           {this.renderJobsList()}
