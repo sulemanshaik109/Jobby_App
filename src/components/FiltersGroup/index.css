@@ -1,0 +1,71 @@
+.filters-group-container {
+  width: 100%;
+}
+.separator {
+  border: 1px solid #b6c5ff;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    width: 25%;
+    max-width: 280px;
+    min-width: 240px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+  .separator {
+    width: 150%;
+  }
+}
+
+.filter-heading {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-heading {
+    margin-top: 32px;
+    font-size: 22px;
+  }
+  .checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+}
+
+.filter-list {
+  padding-left: 0;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-item {
+    margin-top: 24px;
+  }
+}
+
+.filter-label {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-label {
+    font-size: 18px;
+  }
+}

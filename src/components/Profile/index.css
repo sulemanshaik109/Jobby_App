@@ -1,0 +1,80 @@
+.profile-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  height: 150px;
+  background-size: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.profile {
+  width: 40px;
+}
+
+.name {
+  color: #6366f1;
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.short-bio {
+  color: #64748b;
+  font-family: 'Roboto';
+  font-size: 11px;
+}
+
+.profile-failure-view {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retry-btn {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 12px;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 4px;
+  margin-left: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.loader-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 767px) {
+  .profile-container {
+    height: 280px;
+  }
+  .profile {
+    width: 80px;
+  }
+  .name {
+    font-size: 28px;
+  }
+  .short-bio {
+    font-size: 22px;
+  }
+  .retry-btn {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+}

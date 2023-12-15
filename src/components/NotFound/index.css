@@ -1,0 +1,45 @@
+.not-found-container {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.not-found-img {
+  width: 100%;
+}
+
+.not-found-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.not-found-msg {
+  color: #b6c5ff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  width: 60%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 767px) {
+  .not-found-container {
+    padding: 80px;
+  }
+  .not-found-img {
+    width: 40%;
+  }
+  .not-found-heading {
+    font-size: 36px;
+  }
+  .not-found-msg {
+    font-size: 20px;
+  }
+}

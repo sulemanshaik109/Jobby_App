@@ -1,0 +1,150 @@
+.job-link {
+  text-decoration: none;
+}
+
+.job-item {
+  background-color: #202020;
+  width: 100%;
+  padding: 20px 10px 20px 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  color: #f1f5f9;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  color: #fbbf24;
+}
+
+.rating {
+  color: #f1f5f9;
+  font-family: 'Roboto';
+  font-size: 12px;
+  margin: 0px;
+}
+
+.additional-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.location-and-employment-type {
+  display: flex;
+  align-items: center;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  color: #f1f5f9;
+  font-size: 12px;
+  margin-right: 3px;
+}
+
+.location {
+  color: #f1f5f9;
+  font-family: 'Roboto';
+  font-size: 10px;
+  margin: 0px;
+}
+
+.employment-icon {
+  color: #f1f5f9;
+  font-size: 12px;
+  margin-right: 3px;
+  margin-left: 10px;
+}
+
+.package {
+  color: #f1f5f9;
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.description-heading {
+  color: #f1f5f9;
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
+.description {
+  color: #f1f5f9;
+  font-size: 11px;
+  font-family: 'Roboto';
+  line-height: 1.5;
+}
+
+.jobs-separator {
+  border: 1px solid #b6c5ff;
+}
+
+@media screen and (min-width: 767px) {
+  .job-item {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .company-logo {
+    width: 80px;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .star-icon {
+    font-size: 30px;
+  }
+  .rating {
+    font-size: 28px;
+  }
+  .location-icon {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+  .location {
+    font-size: 20px;
+    margin-right: 24px;
+  }
+  .employment-icon {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+  .package {
+    font-size: 26px;
+  }
+  .description-heading {
+    font-size: 26px;
+  }
+  .description {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+}
